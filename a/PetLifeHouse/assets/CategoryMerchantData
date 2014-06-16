@@ -1,0 +1,29 @@
+{
+    "ResponseStatus": 0,
+    "ResponseMsg": "null",
+    "ResponseData": [
+    		{
+    			"TypeId":0,
+    			"TypeName":"全部分类"
+       		},
+       		{
+       			"TypeId":1995,
+       			"TypeName":"宠物美容"
+       		},
+       		{
+       			"TypeId":1997,
+       			"TypeName":"宠物寄养"
+       		},
+       		{
+       			"TypeId":1994,
+       			"TypeName":"宠物医院"
+       		},
+       		{
+       			"TypeId":1998,
+       			"TypeName":"宠物摄影"
+       		},
+       		{
+       			"TypeId":1996,
+       			"TypeName":"宠物训练"
+       		}]    		   
+}

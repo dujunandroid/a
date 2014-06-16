@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:shrinkColumns="0"
+            android:stretchColumns="0" >
+
+            <TableRow
+                android:id="@+id/loginBtn"
+                android:layout_width="fill_parent"
+                android:background="@drawable/more_item_press"
+                android:gravity="center">
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:drawablePadding="5.0dip"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/app_name"
+                        android:textColor="#ff333333"
+                        android:textSize="16.0sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:drawablePadding="5.0dip"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="账户余额:￥0.00"
+                        android:textColor="#ff333333" />
+                </TableLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/mine_padding"
+                    android:src="@drawable/ic_arrow" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:shrinkColumns="0"
+            android:stretchColumns="0" >
+
+            <TableRow android:layout_width="wrap_content" >
+
+                <TextView
+                    android:id="@+id/allOrderBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/more_itembottom_press"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/all_order"
+                    android:textColor="#ff333333" />
+
+                <TextView
+                    android:id="@+id/PayingOrderBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/more_itembottom_press"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/paying_order"
+                    android:textColor="#ff333333" />
+
+                <TextView
+                    android:id="@+id/PayidOrderBtn"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/more_itembottom_press"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/paid_order"
+                    android:textColor="#ff333333" />
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="0"
+            android:stretchColumns="0" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/mine_margin_top" >
+
+                <TextView
+                    android:id="@+id/myDatum"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mine_layout_height"
+                    android:background="@drawable/more_item_press"
+                    android:drawableLeft="@drawable/ic_locked"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/mine_padding_left"
+                    android:paddingRight="@dimen/mine_padding"
+                    android:text="@string/datum"
+                    android:textColor="#ff333333" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/mine_margin_top" >
+
+                <TextView
+                    android:id="@+id/myServiceTicketOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mine_layout_height"
+                    android:background="@drawable/more_item_press"
+                    android:drawableLeft="@drawable/ic_locked"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/mine_padding_left"
+                    android:paddingRight="@dimen/mine_padding"
+                    android:text="@string/service_ticket_order"
+                    android:textColor="#ff333333" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/mine_margin_top" >
+
+                <TextView
+                    android:id="@+id/myServiceTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mine_layout_height"
+                    android:background="@drawable/more_item_press"
+                    android:drawableLeft="@drawable/ic_locked"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/mine_padding_left"
+                    android:paddingRight="@dimen/mine_padding"
+                    android:text="@string/service_ticket"
+                    android:textColor="#ff333333" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/mine_margin_top" >
+
+                <TextView
+                    android:id="@+id/myCoupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mine_layout_height"
+                    android:background="@drawable/more_item_press"
+                    android:drawableLeft="@drawable/ic_locked"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/mine_padding_left"
+                    android:paddingRight="@dimen/mine_padding"
+                    android:text="@string/coupon"
+                    android:textColor="#ff333333" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/mine_margin_top" >
+
+                <TextView
+                    android:id="@+id/myCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/mine_layout_height"
+                    android:background="@drawable/more_item_press"
+                    android:drawableLeft="@drawable/ic_locked"
+                    android:drawableRight="@drawable/ic_arrow"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:paddingLeft="@dimen/mine_padding_left"
+                    android:paddingRight="@dimen/mine_padding"
+                    android:text="@string/collection"
+                    android:textColor="#ff333333" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>

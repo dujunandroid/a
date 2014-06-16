@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/layout_padding" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_coupon" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/ticket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/image"
+            android:singleLine="true"
+            android:text="超级宝贝站外推广优惠券" />
+
+        <TextView
+            android:id="@+id/mianzhi"
+            style="@style/ticket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@id/image"
+            android:singleLine="true"
+            android:text="面值：" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/mianzhi"
+            android:singleLine="true"
+            android:text="40元"
+            android:textColor="#fc4a00"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/ticket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/title"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="未使用" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_jiantou" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/transparent" />
+
+</LinearLayout>

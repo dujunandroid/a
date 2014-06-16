@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="blanck">#090000</color>
+    <color name="title_color">#fc4a00</color>
+    <color name="bg_color">#f0f0f0</color>
+    <color name="text_color_lightyellow">#FFFFE0</color>
+    <color name="text_color_Orange">#FFA500</color>
+    <color name="text_gray">#333333</color>
+    <color name="text_yellow">#fc4a00</color>
+	<color name="text_c7gray">#C7C7C7</color>
+	<color name="Rosy">#8B6969</color>
+	<color name="blue52bdef">#52bdef</color>
+	<color name="white8f">#88ffffff</color>
+	<color name="greyd1s">#d1d1d1</color>
+	<color name="grey71s">#717171</color>
+</resources>

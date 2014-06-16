@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/layout_margin"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/layout_padding" >
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_detail" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/ticket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="本单详情"
+            android:textColor="@color/text_gray" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/topLayout"
+        android:layout_marginBottom="10dp"
+        android:background="#f0f0f0" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/ticket_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+    	android:textColor="@color/text_gray"
+        android:layout_marginLeft="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:text="凭波奇网团购券可享受一下内容\n梳理毛发\n清理眼部\n清洗耳道\n拔耳毛\n修建腹地毛" />
+
+</RelativeLayout>

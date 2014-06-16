@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#f0f0f0" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp" >
+
+        <com.boqii.petlifehouse.widgets.NetImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="72dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/ic_launcher"
+            android:scaleType="fitXY" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image"
+            android:layout_toRightOf="@id/image"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="小小星球宠屋"
+                android:textColor="@color/text_gray"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/check_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/check_icon"
+                android:visibility="gone" />
+            
+            <ImageView
+                android:id="@+id/ticket_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/ticket_icon"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/certificate_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:src="@drawable/certificate_icon"
+                android:visibility="gone" />                      
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/businessarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/price"
+            android:layout_alignLeft="@id/layout"
+            android:layout_marginBottom="0dp"
+            android:layout_toRightOf="@id/image"
+            android:gravity="bottom"
+            android:text="徐汇区龙瑞路95号"
+            android:textColor="#5b5b5b"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/businessarea"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/businessarea"
+            android:gravity="right"
+            android:text="622米"
+            android:textColor="@color/grey71s"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/image"
+            android:layout_alignLeft="@id/layout"
+            android:layout_toRightOf="@id/image"
+            android:gravity="bottom"
+            android:text="人均￥23.00"
+            android:textColor="#fc4a00"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/scan_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/price"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/oriPrice"
+            android:gravity="bottom|right"
+            android:text="浏览100次"
+            android:textColor="#b3b3b3"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingTop="@dimen/layout_padding" >
+
+        <com.boqii.petlifehouse.widgets.NetImageView
+            android:id="@+id/image"
+            android:layout_width="100dp"
+            android:layout_height="72dp"
+            android:layout_marginLeft="@dimen/layout_padding" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/ticket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/image"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="@dimen/layout_padding"
+            android:layout_toRightOf="@id/image"
+            android:maxLines="2"
+            android:text="超级宝贝站外推广优惠券超级宝贝站外推广优惠券超级宝贝站外推广优惠券" />
+
+        <TextView
+            android:id="@+id/mianzhi"
+            style="@style/ticket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_toRightOf="@id/image"
+            android:singleLine="true"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/mianzhi"
+            android:singleLine="true"
+            android:text="￥40.60"
+            android:textColor="#fc4a00"
+            android:textSize="15sp" />
+
+        <com.boqii.petlifehouse.widgets.LineTextView
+            android:id="@+id/oriprice"
+            style="@style/ticket_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/price"
+            android:singleLine="true"
+            android:text="￥80.00" />
+
+        <TextView
+            android:id="@+id/line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/image"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_color" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/line" >
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/layout_padding"
+                android:text="剩余5天1小时27分钟"
+                android:textColor="#717171" />
+
+            <TextView
+                android:id="@+id/delete"
+                style="@style/ticket_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/ic_collect_delete"
+                android:padding="@dimen/layout_padding" />
+
+            <LinearLayout
+                android:id="@+id/delete_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/title_color"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="确定要删除这条收藏吗？"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/sure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_small_btn"
+                    android:text="确定"
+                    android:textColor="#fc4a00"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/cancel"
+                    style="@style/ticket_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_small_btn"
+                    android:text="取消" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#dedede" />
+
+</LinearLayout>

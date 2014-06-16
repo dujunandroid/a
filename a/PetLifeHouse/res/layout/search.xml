@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/bg_navbar_arrow"
+            android:gravity="center"
+            android:text="搜索"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="6dp"
+            android:layout_toLeftOf="@id/search_btn"
+            android:layout_toRightOf="@id/cancel"
+            android:background="@drawable/bg_input"
+            android:gravity="center_vertical"
+            android:paddingRight="8dp" >
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/navbar_search_icon_normal"
+                android:drawablePadding="6dp"
+                android:hint="请输入商品关键字..."
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColorHighlight="@color/text_c7gray"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/cleanSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_clean_text"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#ffffffff"
+        android:divider="#ffffffff"
+        android:dividerHeight="0dp"
+        android:fastScrollEnabled="true"
+        android:listSelector="#717174"
+        android:scrollbars="none" >
+    </ListView>
+
+</LinearLayout>

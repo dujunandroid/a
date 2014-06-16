@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:gravity="center_vertical"
+        android:paddingRight="6dp" >
+
+        <ImageView
+            android:id="@+id/backSW"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="分享到社交网站"
+            android:textColor="@color/TextColorWhite"
+            android:textSize="@dimen/text_size18" />
+
+        <Button
+            android:id="@+id/shareBtn"
+            android:layout_width="50dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_navbar_arrow"
+            android:onClick="onAction"
+            android:textColor="@color/text_yellow"
+            android:scaleType="centerInside"
+            android:text="分享" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/shareETxt"
+        android:layout_width="match_parent"
+        android:layout_height="260dip"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_more_item_default"
+        android:gravity="left|top"
+        android:inputType="textMultiLine"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="@string/share_all"
+        android:textSize="16sp" 
+        android:textColor="@color/text_gray"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="6dp" >
+
+        <CheckBox
+            android:id="@+id/sinaCB"
+            android:layout_width="@dimen/share_weibo_layout_width"
+            android:layout_height="@dimen/share_weibo_layout_height"
+            android:background="@drawable/share_sina"
+            android:button="@null"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/tencentCB"
+            android:layout_width="@dimen/share_weibo_layout_width"
+            android:layout_height="@dimen/share_weibo_layout_height"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/sinaCB"
+            android:background="@drawable/share_qweibo"
+            android:button="@null"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/qZoneCB"
+            android:layout_width="@dimen/share_weibo_layout_width"
+            android:layout_height="@dimen/share_weibo_layout_height"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/tencentCB"
+            android:background="@drawable/share_qz"
+            android:button="@null"
+            android:checked="false" />
+
+        <CheckBox
+            android:id="@+id/netEaseMicroCB"
+            android:layout_width="@dimen/share_weibo_layout_width"
+            android:layout_height="@dimen/share_weibo_layout_height"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_toRightOf="@id/qZoneCB"
+            android:background="@drawable/logo_neteasemicroblog"
+            android:button="@null"
+            android:checked="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/totalNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36dp"
+            android:text="还可输入140个字"
+            android:textColor="#b3b3b3"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

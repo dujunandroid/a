@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boqii.petlifehouse.widgets.CategoryDialogView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cate_gory_dialog_view"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#8833383b" >
+
+    <LinearLayout
+        android:id="@+id/category_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginTop="51dp"
+        android:background="@color/greyd1s"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="100dip"
+        android:layout_marginTop="51dp"
+        android:layout_toRightOf="@id/category_layout"
+        android:background="@color/TextColorWhite"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/sub_category_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/order_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:background="@color/greyd1s"
+        android:orientation="vertical"
+        android:visibility="invisible" >
+
+        <TextView
+            style="@style/ticket_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyd1s"
+            android:gravity="left"
+            android:padding="@dimen/layout_padding"
+            android:tag="1"
+            android:text="离我最近" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            style="@style/ticket_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyd1s"
+            android:gravity="left"
+            android:padding="@dimen/layout_padding"
+            android:tag="2"
+            android:text="价格最低" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            style="@style/ticket_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyd1s"
+            android:gravity="left"
+            android:padding="@dimen/layout_padding"
+            android:tag="3"
+            android:text="价格最高" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f0f0f0" />
+
+        <TextView
+            style="@style/ticket_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greyd1s"
+            android:gravity="left"
+            android:padding="@dimen/layout_padding"
+            android:tag="4"
+            android:text="销量最好" />
+    </LinearLayout>
+
+    <include layout="@layout/category_dialog_bar" />
+
+</com.boqii.petlifehouse.widgets.CategoryDialogView>

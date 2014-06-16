@@ -1,0 +1,77 @@
+{
+    "ResponseStatus": 0,
+    "ResponseMsg": "null",
+    "ResponseData": [{
+        "TypeList": [{
+            "SubTypeId": "0",
+            "SubTypeName": "全部"
+        }],
+        "TypeName": "全部分类"
+    },
+    {
+        "TypeList": [{
+            "SubTypeId": "800",
+            "SubTypeName": "全部"
+        },
+        {
+            "SubTypeId": 9007,
+            "SubTypeName": "洗护"
+        },
+        {
+            "SubTypeId": 9008,
+            "SubTypeName": "寄养"
+        },
+        {
+            "SubTypeId": 9009,
+            "SubTypeName": "体检"
+        },
+        {
+            "SubTypeId": 9010,
+            "SubTypeName": "绝育"
+        },
+        {
+            "SubTypeId": 9011,
+            "SubTypeName": "医疗"
+        },
+        {
+            "SubTypeId": 9012,
+            "SubTypeName": "摄影"
+        }],
+        "TypeName": "猫猫服务"
+    },
+    {
+        "TypeList": [{
+            "SubTypeId": "900",
+            "SubTypeName": "全部"
+        },
+        {
+            "SubTypeId": 9000,
+            "SubTypeName": "洗护"
+        },
+        {
+            "SubTypeId": 9001,
+            "SubTypeName": "造型"
+        },
+        {
+            "SubTypeId": 9002,
+            "SubTypeName": "寄养"
+        },
+        {
+            "SubTypeId": 9003,
+            "SubTypeName": "体检"
+        },
+        {
+            "SubTypeId": 9004,
+            "SubTypeName": "绝育"
+        },
+        {
+            "SubTypeId": 9005,
+            "SubTypeName": "医疗"
+        },
+        {
+            "SubTypeId": 9006,
+            "SubTypeName": "摄影"
+        }],
+        "TypeName": "狗狗服务"
+    }]
+}

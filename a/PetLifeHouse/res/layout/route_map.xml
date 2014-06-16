@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/TextColorWhite"
+    android:orientation="vertical" >
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mRouteMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/backRMBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_black_navbar_arrow"
+        android:src="@drawable/ic_back" />
+
+    <SlidingDrawer
+        android:id="@+id/sliding"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        android:content="@+id/routeLV"
+        android:handle="@+id/openOrCloseBtn"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/routeLV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#99121212"
+            android:cacheColorHint="@android:color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/openOrCloseBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageViewIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_route_close" />
+
+            <TextView
+                android:id="@+id/showTotal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#99121212"
+                android:gravity="center"
+                android:text="正在查询请稍后..."
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/greyd1s" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+</FrameLayout>

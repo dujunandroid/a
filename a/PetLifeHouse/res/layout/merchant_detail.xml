@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_share" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <ScrollView
+            android:id="@+id/main_page"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_margin" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        android:id="@+id/merchant_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="小小星球宠物"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/merchant_name"
+                        android:layout_marginTop="10dp" >
+
+                        <com.boqii.petlifehouse.widgets.NetImageView
+                            android:id="@+id/image"
+                            android:layout_width="100dp"
+                            android:layout_height="72dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="6dp"
+                            android:background="@drawable/ic_launcher"
+                            android:scaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/businessarea"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/image"
+                            android:text="徐汇区龙瑞路95号"
+                            android:textColor="#5b5b5b"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/businessarea"
+                            android:layout_alignParentRight="true"
+                            android:drawableLeft="@drawable/icon_address"
+                            android:drawablePadding="6dp"
+                            android:gravity="right|center_vertical"
+                            android:text="622米"
+                            android:textColor="#717171"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/businessarea"
+                            android:layout_marginTop="15dp"
+                            android:layout_toRightOf="@id/image"
+                            android:text="人均￥23.00"
+                            android:textColor="#fc4a00"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/scan_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/price"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@id/oriPrice"
+                            android:gravity="bottom|right"
+                            android:text="浏览100次"
+                            android:textColor="#717171"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <include
+                    android:id="@+id/address"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    layout="@layout/layout_short_item" />
+
+                <include
+                    android:id="@+id/telephone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    layout="@layout/layout_short_item" />
+
+                <LinearLayout
+                    android:id="@+id/ticket_list"
+                    android:layout_width="fill_parent"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/merchant_desc"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    layout="@layout/layout_string_item" />
+
+                <include
+                    android:id="@+id/merchant_traffic"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    layout="@layout/layout_string_item" />
+
+                <include
+                    android:id="@+id/merchant_near"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    layout="@layout/layout_string_item" />
+
+                <include
+                    android:id="@+id/envir"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin"
+                    layout="@layout/layout_short_item" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

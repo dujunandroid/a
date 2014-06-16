@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titelRLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:gravity="center_vertical"
+        android:paddingRight="12dp" >
+
+        <ImageView
+            android:id="@+id/backRBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="波奇用户注册"
+            android:textColor="@color/TextColorWhite"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/toLoginRBtn"
+            android:layout_width="45dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_navbar_arrow"
+            android:gravity="center"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:text="登录"
+            android:textColor="@color/text_yellow" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/accountRLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titelRLayout"
+        android:layout_marginLeft="@dimen/margin_allT24"
+        android:layout_marginRight="@dimen/margin_allT24"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/accountRETxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_account"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="请输入11位手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColorHint="@color/grey71s"
+            android:textSize="@dimen/text_size14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/passwordRLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accountRLayout"
+        android:layout_marginLeft="@dimen/margin_allT24"
+        android:layout_marginRight="@dimen/margin_allT24"
+        android:layout_marginTop="@dimen/margin_allTop"
+        android:background="@drawable/bg_input" >
+
+        <CheckBox
+            android:id="@+id/showPassWordRCBox"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/input_checkbox_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@drawable/icon_view_unchecked"
+            android:scaleType="centerInside" />
+
+        <EditText
+            android:id="@+id/passWordREtxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/showPassWordRCBox"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_password"
+            android:drawablePadding="8dp"
+            android:hint="6-20位数字、字母、符号组合"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColorHint="@color/grey71s"
+            android:textSize="@dimen/text_size14" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/confirmationLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordRLayout"
+        android:layout_marginLeft="@dimen/margin_allT24"
+        android:layout_marginRight="@dimen/margin_allT24"
+        android:layout_marginTop="@dimen/margin_allTop"
+        android:background="@drawable/bg_input"
+        android:gravity="center_vertical" >
+
+        <EditText
+            android:id="@+id/confirmationREtxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:paddingLeft="9dp"
+            android:textColorHint="@color/grey71s"
+            android:textSize="@dimen/text_size14" />
+
+        <TextView
+            android:id="@+id/getConfirmationBtn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_sendauthcode"
+            android:gravity="center"
+            android:text="@string/get_code"
+            android:textColor="@color/TextColorWhite"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirmationLayout"
+        android:layout_marginLeft="@dimen/margin_allT24"
+        android:layout_marginRight="@dimen/margin_allT24"
+        android:layout_marginTop="@dimen/margin_allTop"
+        android:background="@drawable/bg_button"
+        android:text="@string/register"
+        android:textColor="@color/TextColorWhite"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerBtn"
+        android:layout_marginLeft="@dimen/margin_allT24"
+        android:layout_marginRight="@dimen/margin_allT24"
+        android:layout_marginTop="@dimen/margin_allT24" >
+
+        <CheckBox
+            android:id="@+id/agreeRBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_checked"
+            android:button="@null"
+            android:checked="true"
+            android:paddingLeft="16dp"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/letTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:layout_toRightOf="@id/agreeRBtn"
+            android:text="我已阅读并同意" />
+
+        <TextView
+            android:id="@+id/protocolTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/letTxt"
+            android:text="《波奇网服务协议》"
+            android:textColor="#52bdef" />
+    </RelativeLayout>
+
+</RelativeLayout>

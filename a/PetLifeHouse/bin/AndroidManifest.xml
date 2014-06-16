@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.boqii.petlifehouse"
+    android:versionCode="1"
+    android:versionName="0.8" >
+
+    <!-- 地图显示相关权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!-- ShareSDK需要的权限 =上下权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- jpush permission -->
+    <uses-permission android:name="com.boqii.petlifehouse.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>  
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <permission
+        android:name="com.boqii.petlifehouse.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-sdk android:minSdkVersion="10" />
+
+    <application
+        android:name="com.boqii.petlifehouse.baseactivities.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Black.NoTitleBar" >
+        <meta-data android:name="JPUSH_CHANNEL" android:value="boqii"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="1a83bb09e23decb3be740959" />
+        <meta-data android:name="UMENG_APPKEY" android:value="5375b4df56240b3f74014eac"/>
+        <meta-data android:name="UMENG_CHANNEL" android:value="default"/>
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="90f4e033cdcc0979042baee4d6ec757e" />
+
+     
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="orientation|keyboardHidden" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.boqii.petlifehouse" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+    
+        
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+                
+            </intent-filter>
+        </service>
+        
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+             <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="com.boqii.petlifehouse" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+             <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+   
+        </receiver>
+        
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <activity
+            android:name="com.boqii.petlifehouse.activities.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:label="@string/app_name" android:screenOrientation="portrait">
+<!--             <intent-filter> -->
+<!--                 <category android:name="android.intent.category.DEFAULT"></category> -->
+<!--                 <action android:name="android.intent.action.VIEW"></action> -->
+<!--                 <data android:scheme="dujun"></data> -->
+<!--             </intent-filter> -->
+        </activity>
+        <activity android:name="com.boqii.petlifehouse.activities.LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.boqii.petlifehouse.activities.ShareWeiboActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.boqii.petlifehouse.activities.MapPatternActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.boqii.petlifehouse.activities.RouteActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.boqii.petlifehouse.activities.MapRouteActivity" android:screenOrientation="portrait"/>
+       <activity android:name="com.boqii.petlifehouse.activities.RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.boqii.petlifehouse.activities.ProtocolsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- share的配置 -->
+        <activity
+            android:name="cn.sharesdk.framework.ShareSDKUIShell"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="com.boqii.petlifehouse.adapter.MyAuthorizeAdaper" />
+
+            <!--
+               	  如果集成QQ分享，或者使用QQ客户端来进行QQ空间的分享，须要在此处添加一个对ACTION_VIEW
+            	事件的过滤器，其中的scheme是“tencent”前缀再应用的加上appId。如果此过滤器不设置，
+            	则分享结束以后不能得到正确的回调
+            -->
+            <intent-filter>
+                <data android:scheme="tencent1101479516" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调界面 -->
+        <activity
+            android:name=".activities.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activities.PayDemoActivity" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.SplashActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.certification.CertificationActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.certification.CardActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.fast.FastFristActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.fast.FastSecondActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.fast.BankDialog"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.DealsResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.updatepasswd.PasswordChangeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.bankcardmanage.BankCardActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.bankcardmanage.bindcard.BankCardBindActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.bankcardmanage.bindcard.BankCardBindResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.bankcardmanage.cardinfo.BankCardInfoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.bankcardmanage.balancequery.BalanceQueryActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.bankcardmanage.balancequery.BalanceQueryResultActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.updatemobilenum.PhoneNumChangeActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.getsecuritquestion.GetSecuritQuestionActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.retpasswd.RetPassword2Activity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.transactionmanage.storedcard.StoredValueCardPaymentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.util.Util2"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.util.Util1"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.login.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.register.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.register.CheckProtocalActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.unionpay.upomp.yidatec.usermanage.myinfo.MyInfoActivityActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".activities.AliWebPayActivity" android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".activities.SearchActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.TicketDetailActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.WebViewActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".demo.CategoryDialogViewTest"></activity>
+        <activity android:name=".activities.MerchantDetailActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.CommitOrderActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.PayOrderActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.UserInfoActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.MyTicketDetailActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.ListActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.CouponDetailActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.MyCouponActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.MyOrderActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.MyTicketActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.MyCollectionActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.FindPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.UpdatePasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activities.WebViewBuyActivity" android:screenOrientation="portrait"></activity>
+		<activity android:name=".activities.RecommendActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.LaunchingActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter></activity>
+        <activity android:screenOrientation="portrait" android:name=".activities.AliWebLoginActivity"></activity>
+        <activity android:screenOrientation="portrait" android:name=".activities.MyTicketListActivity"></activity>
+    </application>
+
+</manifest>

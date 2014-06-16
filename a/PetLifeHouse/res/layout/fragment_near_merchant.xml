@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/TextColorWhite"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.boqii.petlifehouse.widgets.XListView
+            android:id="@+id/nearMerchantList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:cacheColorHint="#00000000"
+            android:divider="#f0f0f0"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/nodataNM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="50dp"
+            android:drawableTop="@drawable/logo_nodata"
+            android:gravity="center"
+            android:text="暂时没有该商户信息\n先看看其它吧"
+            android:textColor="#717171"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/progressNM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <include layout="@layout/category_dialog_bar" />
+
+    <include layout="@layout/category_merchant_dialog" />
+
+</FrameLayout>

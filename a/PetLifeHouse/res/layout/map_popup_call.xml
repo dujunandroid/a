@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/more_item_press"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="26dp"
+    android:paddingRight="26dp"
+    android:paddingTop="16dp" >
+
+    <TextView
+        android:id="@+id/phoneNumberTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/call" />
+
+    <Button
+        android:id="@+id/callOkBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mine_margin_top"
+        android:background="@drawable/more_item_press"
+        android:onClick="onAction"
+        android:text="@string/call_ok" />
+
+    <Button
+        android:id="@+id/callCancelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mine_margin_top"
+        android:background="@drawable/more_item_press"
+        android:onClick="onAction"
+        android:text="@string/call_cancel" />
+
+</LinearLayout>

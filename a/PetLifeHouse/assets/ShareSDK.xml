@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+
+    <ShareSDK AppKey="1e4a4c0085fe" />
+
+    <SinaWeibo
+        AppKey="3838805037"
+        AppSecret="823957130819946d07452641a7ed9115"
+        Enable="true"
+        Id="1"
+        RedirectUrl="http://www.boqii.com"
+        ShareByAppClient="false"
+        SortId="1" />           
+        
+    <Wechat
+        AppId="wx6ce20275fb3ca36b"
+        AppSecret="07a1e931f0f28a65d0b55e20e095241b"
+        BypassApproval="false"
+        Enable="true"
+        Id="2"
+        SortId="2" />
+
+    <WechatMoments
+        AppId="wx6ce20275fb3ca36b"
+        AppSecret="07a1e931f0f28a65d0b55e20e095241b"
+        BypassApproval="false"
+        Enable="true"
+        Id="3"
+        SortId="3" />
+
+    <QQ
+        AppId="1101479516"
+        AppKey="HPeLc2FrGeeSdMrV"
+        Enable="true"
+        Id="4"
+        SortId="4" />
+
+    <!-- ShareByAppClient标识是否使用微博客户端分享，默认是false -->
+
+    <QZone
+        AppId="1101479516"
+        AppKey="HPeLc2FrGeeSdMrV"
+        Enable="true"
+        Id="5"
+        ShareByAppClient="true"
+        SortId="5" />
+
+    <TencentWeibo
+        AppKey="1101479516"
+        AppSecret="HPeLc2FrGeeSdMrV"
+        Enable="true"
+        Id="6"
+        RedirectUri="http://www.boqii.com"
+        ShareByAppClient="true"
+        SortId="6" />
+
+    <ShortMessage
+        Enable="true"
+        Id="7"
+        SortId="7" />
+
+    <NetEaseMicroBlog
+        ConsumerKey="dFQQXrNmL69ecHsB"
+        ConsumerSecret="1meNWneOCIUGND1JemWlOMCxGOJSyZQ8"
+        Enable="false"
+        Id="8"
+        RedirectUri="http://www.boqii.com"
+        SortId="8" />
+
+    <WechatFavorite Enable="false" />
+
+    <Facebook Enable="false" />
+
+    <Twitter Enable="false" />
+
+    <Renren Enable="false" />
+
+    <KaiXin Enable="false" />
+
+    <Email Enable="false" />
+
+    <SohuMicroBlog
+        ApiKey="q70QBQM9T0COxzYpGLj9"
+        CallbackUrl="http://www.sharesdk.cn"
+        ConsumerKey="q70QBQM9T0COxzYpGLj9"
+        ConsumerSecret="XXYrx%QXbS!uA^m2$8TaD4T1HQoRPUH0gaG2BgBd"
+        Enable="false"
+        Id="14"
+        SortId="14" />
+
+    <Douban Enable="false" />
+
+    <YouDao Enable="false" />
+
+    <SohuSuishenkan
+        AppKey="e16680a815134504b746c86e08a19db0"
+        AppSecret="b8eec53707c3976efc91614dd16ef81c"
+        Enable="false"
+        RedirectUri="http://sharesdk.cn" />
+
+    <!--
+        在中国大陆，印象笔记有两个服务器，一个是沙箱（sandbox），一个是生产服务器（china）。
+    	一般你注册应用，它会先让你使用sandbox，当你完成测试以后，可以到
+    	http://dev.yinxiang.com/support/上激活你的ConsumerKey，激活成功后，修改HostType
+    	为china就好了。至于如果您申请的是国际版的印象笔记（Evernote），则其生产服务器类型为
+    	“product”。
+    	
+    	如果目标设备上已经安装了印象笔记客户端，ShareSDK允许应用调用本地API来完成分享，但
+    	是需要将应用信息中的“ShareByAppClient”设置为true，此字段默认值为false。
+    -->
+
+    <Evernote Enable="false" />
+
+    <LinkedIn Enable="false" />
+
+    <GooglePlus Enable="false" />
+
+    <FourSquare Enable="false" />
+
+    <Pinterest Enable="false" />
+
+    <Flickr Enable="false" />
+
+    <Tumblr Enable="false" />
+
+    <Dropbox Enable="false" />
+
+    <VKontakte Enable="false" />
+
+    <Instagram Enable="false" />
+
+    <!--
+        Yixin易信和YixinMoments易信朋友圈的appid是一样的；
+    
+                       注意：开发者不能用我们这两个平台的appid,否则分享不了
+    
+       	 易信测试的时候需要先签名打包出apk,
+		sample测试易信，要先签名打包，keystore在sample项目中，密码123456
+		
+		BypassApproval是绕过审核的标记，设置为true后AppId将被忽略，故不经过
+		审核的应用也可以执行分享，但是仅限于分享文字或图片，不能分享其他类型，
+		默认值为false
+    -->
+
+    <Yixin Enable="false" />
+
+    <YixinMoments Enable="false" />
+
+    <Mingdao Enable="false" />
+
+</DevInfor>

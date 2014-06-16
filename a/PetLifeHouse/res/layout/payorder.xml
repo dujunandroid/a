@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="支付订单" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:id="@+id/main_page"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_margin" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        android:id="@+id/ticket_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="【黄兴公园】派多格宠物 5KG以内狗狗美容造型套餐"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="总价" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        style="@style/ticket_buyed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥89.00" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/message"
+                    style="@style/ticket_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding"
+                    android:text="购买成功后，服务券凭证将发送到:18221841106" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用优惠券" />
+
+                    <EditText
+                        android:id="@+id/coupon_no"
+                        style="@style/ticket_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_edittext"
+                        android:inputType="none"
+                        android:paddingLeft="5dp"
+                        android:visibility="invisible" />
+
+                    <CheckBox
+                        android:id="@+id/coupon_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@drawable/bg_checked" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的余额：" />
+
+                    <TextView
+                        android:id="@+id/mybalance"
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="102元" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用余额：" />
+
+                    <TextView
+                        android:id="@+id/usebalance"
+                        style="@style/ticket_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="0元" />
+
+                    <CheckBox
+                        android:id="@+id/balance_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@drawable/bg_checked" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/password_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="支付密码：" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="12dp"
+                        android:background="@drawable/bg_edittext"
+                        android:gravity="center_vertical" >
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:ems="10"
+                            android:hint="输入支付密码"
+                            android:inputType="textPassword"
+                            android:paddingLeft="12dp"                          
+                            android:textSize="13sp" >
+
+                            <requestFocus />
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/sure"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_blue_sure"
+                            android:text="确定"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="应付金额：" />
+
+                    <TextView
+                        android:id="@+id/topay"
+                        style="@style/ticket_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="￥198.00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用优惠券：" />
+
+                    <TextView
+                        android:id="@+id/coupon_price"
+                        style="@style/ticket_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="-￥0.00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="使用余额：" />
+
+                    <TextView
+                        android:id="@+id/balance_used"
+                        style="@style/ticket_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="-￥0.00" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding" >
+
+                    <TextView
+                        style="@style/ticket_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="还需支付：" />
+
+                    <TextView
+                        android:id="@+id/needpay"
+                        style="@style/ticket_buyed"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="￥190.00" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/ticket_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/layout_padding"
+                    android:text="选择支付方式" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="70dp"
+                    android:background="@android:color/white"
+                    android:paddingBottom="@dimen/layout_padding"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingTop="@dimen/layout_padding" >
+
+                    <ImageView
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_alipay" />
+
+                    <TextView
+                        android:id="@+id/text1"
+                        style="@style/ticket_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img1"
+                        android:text="支付宝客户端支付" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img1"
+                        android:text="推荐已安装支付宝客户端的用户使用"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/alipay_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/bg_checked"
+                        android:checked="false" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@android:color/white"
+                    android:paddingBottom="@dimen/layout_padding"
+                    android:paddingLeft="@dimen/layout_padding"
+                    android:paddingTop="@dimen/layout_padding"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_alipay_web" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        style="@style/ticket_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img2"
+                        android:text="支付宝网页支付" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img2"
+                        android:text="推荐有支付宝帐户的用户使用"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
+
+                    <CheckBox
+                        android:id="@+id/alipay_web_check"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@drawable/bg_checked"
+                        android:checked="false" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#fc3500"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="确认支付"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>

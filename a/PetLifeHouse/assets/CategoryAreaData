@@ -1,0 +1,421 @@
+{
+    "ResponseStatus": 0,
+    "ResponseMsg": "null",
+    "ResponseData": [{
+        "AreaName": "全部地区",
+        "AreaList": [{
+            "SubAreaName": "A",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "安亭",
+            "SubAreaId": "74"
+        },
+        {
+            "SubAreaName": "B",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "八佰伴",
+            "SubAreaId": "22"
+        },
+        {
+            "SubAreaName": "碧云社区",
+            "SubAreaId": "23"
+        },
+        {
+            "SubAreaName": "北蔡",
+            "SubAreaId": "26"
+        },
+        {
+            "SubAreaName": "北新泾",
+            "SubAreaId": "45"
+        },
+        {
+            "SubAreaName": "北外滩",
+            "SubAreaId": "52"
+        },
+        {
+            "SubAreaName": "北区汽车站",
+            "SubAreaId": "59"
+        },
+        {
+            "SubAreaName": "堡镇",
+            "SubAreaId": "112"
+        },
+        {
+            "SubAreaName": "白鹤",
+            "SubAreaId": "118"
+        },
+        {
+            "SubAreaName": "C",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "春申地区",
+            "SubAreaId": "8"
+        },
+        {
+            "SubAreaName": "川沙",
+            "SubAreaId": "19"
+        },
+        {
+            "SubAreaName": "曹杨地区",
+            "SubAreaId": "31"
+        },
+        {
+            "SubAreaName": "长寿路",
+            "SubAreaId": "32"
+        },
+        {
+            "SubAreaName": "长风公园\/华师大",
+            "SubAreaId": "33"
+        },
+        {
+            "SubAreaName": "长征",
+            "SubAreaId": "36"
+        },
+        {
+            "SubAreaName": "漕河泾\/田林",
+            "SubAreaId": "66"
+        },
+        {
+            "SubAreaName": "曹家渡",
+            "SubAreaId": "82"
+        },
+        {
+            "SubAreaName": "城隍庙",
+            "SubAreaId": "91"
+        },
+        {
+            "SubAreaName": "漕泾",
+            "SubAreaId": "108"
+        },
+        {
+            "SubAreaName": "崇明",
+            "SubAreaId": "110"
+        },
+        {
+            "SubAreaName": "崇明新城",
+            "SubAreaId": "111"
+        },
+        {
+            "SubAreaName": "长兴岛",
+            "SubAreaId": "115"
+        },
+        {
+            "SubAreaName": "崇明其他",
+            "SubAreaId": "116"
+        },
+        {
+            "SubAreaName": "重固",
+            "SubAreaId": "117"
+        },
+        {
+            "SubAreaName": "D",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "动物园\/虹桥机场",
+            "SubAreaId": "46"
+        },
+        {
+            "SubAreaName": "大宁地区",
+            "SubAreaId": "57"
+        },
+        {
+            "SubAreaName": "大华地区",
+            "SubAreaId": "85"
+        },
+        {
+            "SubAreaName": "董家渡",
+            "SubAreaId": "92"
+        },
+        {
+            "SubAreaName": "打浦桥",
+            "SubAreaId": "93"
+        },
+        {
+            "SubAreaName": "F",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "复兴西路\/丁香花园",
+            "SubAreaId": "69"
+        },
+        {
+            "SubAreaName": "奉城",
+            "SubAreaId": "99"
+        },
+        {
+            "SubAreaName": "枫泾",
+            "SubAreaId": "105"
+        },
+        {
+            "SubAreaName": "G",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "古北",
+            "SubAreaId": "48"
+        },
+        {
+            "SubAreaName": "H",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "虹桥镇",
+            "SubAreaId": "7"
+        },
+        {
+            "SubAreaName": "虹梅路",
+            "SubAreaId": "9"
+        },
+        {
+            "SubAreaName": "惠南镇",
+            "SubAreaId": "24"
+        },
+        {
+            "SubAreaName": "黄兴公园",
+            "SubAreaId": "40"
+        },
+        {
+            "SubAreaName": "虹桥",
+            "SubAreaId": "49"
+        },
+        {
+            "SubAreaName": "虹口足球场",
+            "SubAreaId": "51"
+        },
+        {
+            "SubAreaName": "海宁路\/七浦路",
+            "SubAreaId": "56"
+        },
+        {
+            "SubAreaName": "火车站",
+            "SubAreaId": "61"
+        },
+        {
+            "SubAreaName": "衡山路",
+            "SubAreaId": "68"
+        },
+        {
+            "SubAreaName": "淮海路",
+            "SubAreaId": "94"
+        },
+        {
+            "SubAreaName": "海湾旅游区",
+            "SubAreaId": "98"
+        },
+        {
+            "SubAreaName": "横沙岛",
+            "SubAreaId": "114"
+        },
+        {
+            "SubAreaName": "航头",
+            "SubAreaId": "126"
+        },
+        {
+            "SubAreaName": "惠南",
+            "SubAreaId": "128"
+        },
+        {
+            "SubAreaName": "J",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "金桥",
+            "SubAreaId": "11"
+        },
+        {
+            "SubAreaName": "金杨地区",
+            "SubAreaId": "21"
+        },
+        {
+            "SubAreaName": "嘉定镇",
+            "SubAreaId": "72"
+        },
+        {
+            "SubAreaName": "江桥",
+            "SubAreaId": "73"
+        },
+        {
+            "SubAreaName": "九亭",
+            "SubAreaId": "76"
+        },
+        {
+            "SubAreaName": "静安寺",
+            "SubAreaId": "81"
+        },
+        {
+            "SubAreaName": "金汇",
+            "SubAreaId": "102"
+        },
+        {
+            "SubAreaName": "金山新城",
+            "SubAreaId": "106"
+        },
+        {
+            "SubAreaName": "金山中部",
+            "SubAreaId": "109"
+        },
+        {
+            "SubAreaName": "K",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "康桥\/周浦",
+            "SubAreaId": "13"
+        },
+        {
+            "SubAreaName": "控江地区",
+            "SubAreaId": "39"
+        },
+        {
+            "SubAreaName": "康桥",
+            "SubAreaId": "124"
+        },
+        {
+            "SubAreaName": "L",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "老闵行",
+            "SubAreaId": "3"
+        },
+        {
+            "SubAreaName": "龙柏地区",
+            "SubAreaId": "4"
+        },
+        {
+            "SubAreaName": "陆家嘴",
+            "SubAreaId": "20"
+        },
+        {
+            "SubAreaName": "凉城\/江湾镇",
+            "SubAreaId": "50"
+        },
+        {
+            "SubAreaName": "临平路\/和平公园",
+            "SubAreaId": "54"
+        },
+        {
+            "SubAreaName": "龙华",
+            "SubAreaId": "67"
+        },
+        {
+            "SubAreaName": "老西门",
+            "SubAreaId": "88"
+        },
+        {
+            "SubAreaName": "陈家镇",
+            "SubAreaId": "113"
+        },
+        {
+            "SubAreaName": "临港新城",
+            "SubAreaId": "127"
+        },
+        {
+            "SubAreaName": "M",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "梅川路",
+            "SubAreaId": "27"
+        },
+        {
+            "SubAreaName": "庙行镇",
+            "SubAreaId": "83"
+        },
+        {
+            "SubAreaName": "N",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "南方商城",
+            "SubAreaId": "5"
+        },
+        {
+            "SubAreaName": "南翔",
+            "SubAreaId": "71"
+        },
+        {
+            "SubAreaName": "南京西路",
+            "SubAreaId": "79"
+        },
+        {
+            "SubAreaName": "南京东路",
+            "SubAreaId": "90"
+        },
+        {
+            "SubAreaName": "南桥",
+            "SubAreaId": "97"
+        },
+        {
+            "SubAreaName": "P",
+            "SubAreaId": "0"
+        },
+        {
+            "SubAreaName": "平凉路",
+            "SubAreaId": "42"
+        }]
+    },
+    {
+        "AreaName": "宝山",
+        "AreaList": [{
+            "SubAreaName": "宝山区全境",
+            "SubCityId": "3101"
+        },
+        {
+            "SubAreaName": "庙行镇",
+            "SubAreaId": "83"
+        },
+        {
+            "SubAreaName": "吴淞",
+            "SubAreaId": "84"
+        },
+        {
+            "SubAreaName": "大华地区",
+            "SubAreaId": "85"
+        },
+        {
+            "SubAreaName": "上海大学",
+            "SubAreaId": "86"
+        }]
+    },
+    {
+        "AreaName": "金山",
+        "AreaList": [{
+            "SubAreaName": "金山区全境",
+            "SubCityId": "3102"
+        },
+        {
+            "SubAreaName": "石化",
+            "SubAreaId": "103"
+        },
+        {
+            "SubAreaName": "朱泾",
+            "SubAreaId": "104"
+        },
+        {
+            "SubAreaName": "枫泾",
+            "SubAreaId": "105"
+        },
+        {
+            "SubAreaName": "金山新城",
+            "SubAreaId": "106"
+        },
+        {
+            "SubAreaName": "亭林",
+            "SubAreaId": "107"
+        },
+        {
+            "SubAreaName": "漕泾",
+            "SubAreaId": "108"
+        },
+        {
+            "SubAreaName": "金山中部",
+            "SubAreaId": "109"
+        }]
+    }]
+}

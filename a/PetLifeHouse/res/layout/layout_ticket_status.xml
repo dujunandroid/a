@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="@dimen/layout_padding" >
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/image"
+        android:layout_alignLeft="@id/title"
+        android:layout_toRightOf="@id/image"
+        android:text="￥23.00"
+        android:textColor="#fc4a00"
+        android:textSize="18sp" />
+
+    <com.boqii.petlifehouse.widgets.LineTextView
+        android:id="@+id/oriPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/price"
+        android:text="￥198.00"
+        android:textColor="#b3b3b3"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/oriPrice"
+        android:text="7.4折"
+        android:textColor="#333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/limit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/price"
+        android:layout_below="@id/price"
+        android:layout_marginTop="2dp"
+        android:singleLine="true"
+        android:text="一个用户最多只可购买2张"
+        android:textColor="#b3b3b3"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/buy_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_buy" />
+
+</RelativeLayout>

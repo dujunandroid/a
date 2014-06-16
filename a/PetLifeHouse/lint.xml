@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ButtonStyle" severity="ignore" />
+    <issue id="ContentDescription" severity="ignore" />
+    <issue id="DefaultLocale" severity="ignore" />
+    <issue id="DisableBaselineAlignment" severity="ignore" />
+    <issue id="DrawAllocation" severity="ignore" />
+    <issue id="DuplicateIds" severity="ignore" />
+    <issue id="ExportedReceiver" severity="ignore" />
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="HardcodedText" severity="ignore" />
+    <issue id="InefficientWeight" severity="ignore">
+        <ignore path="res/layout/near.xml" />
+    </issue>
+    <issue id="MissingTranslation" severity="warning" />
+    <issue id="NestedWeights" severity="ignore" />
+    <issue id="ObsoleteLayoutParam">
+        <ignore path="res/layout/near.xml" />
+    </issue>
+    <issue id="PxUsage" severity="ignore" />
+    <issue id="ScrollViewSize" severity="ignore" />
+    <issue id="StringFormatCount" severity="fatal" />
+    <issue id="TypographyEllipsis" severity="ignore" />
+    <issue id="UnusedNamespace" severity="ignore" />
+    <issue id="UseCompoundDrawables" severity="ignore" />
+    <issue id="UselessParent" severity="ignore" />
+    <issue id="UsesMinSdkAttributes" severity="ignore" />
+</lint>

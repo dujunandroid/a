@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/radioGroupN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/nearTicket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_ticket"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/nearMerchant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_merchat"
+                android:button="@null"
+                android:checked="true" />
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/mapPatternBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:src="@drawable/nearby_08"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/nearContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">波奇宠物</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="home">首页</string>
+    <string name="near">附近</string>
+    <string name="find">查找</string>
+    <string name="mine">我的</string>
+    <string name="more">更多</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="register_loading">正在注册请稍后...</string>
+    <string name="register_suc">注册成功</string>
+    <string name="no_user">帐号名不存在</string>
+    <string name="login_lose">帐号名或密码错误</string>
+    <string name="user_null">帐号名不能为空</string>
+    <string name="no_phonenum">您输入的不是手机号码</string>
+    <string name="password_null">密码不能为空</string>
+    <string name="password_6">密码长度必须大于6</string>
+    <string name="again_code">秒后可重新获取</string>
+    <string name="get_code">获取验证码</string>
+    <string name="loading">正在加载数据...</string>
+    <string name="loading_code">正在获取验证码...</string>
+    <string name="no_data">暂无数据</string>
+    <string name="collect_no_data">暂时没有该类收藏</string>
+    <string name="delete_success">删除成功</string>
+     <string name="illegal_operation">操作失败！</string>
+    <string name="pay_success">支付成功</string>
+    <string name="collect_success">收藏成功</string>
+    <string name="collect_delete_success">删除收藏成功</string>
+    <string name="nan">男</string>
+    <string name="nv">女</string>
+    <string name="version">版本号：</string>
+    <string name="market_install">请先安装应用市场</string>
+    <string name="get_newest_version">正在获取最新版本信息...</string>
+    <string name="already_newest">已是最新版</string>
+    <string name="coupon_no_data">暂时没有该类优惠券</string>
+    <string name="ticket_no_data">暂时没有该类服务券</string>
+    <string name="tobuy">去付款</string>
+    <string name="look_ticket">查看凭证</string>
+    <string name="perpersion">人均 ￥%s</string>
+    <!-- home -->
+    <string name="exit_message">再按一次退出程序</string>
+    <string name="buyed">%s人已购</string>
+    <string name="price">%s元</string>
+    <string name="coupon_detail">优惠券详情</string>
+    <string name="range">使用范围</string>
+    <!-- ticket detail -->
+    <string name="order_detail">本单详情</string>
+    <string name="remind">特别提醒</string>
+    <string name="pro_show">项目展示</string>
+    <string name="merchant_intro">商家介绍</string>
+    <string name="traffic">交通到达</string>
+    <string name="area_near">周边小区</string>
+    <string name="envir">服务环境</string>
+    <string name="sale">%s折</string>
+    <string name="distance">%skm</string>
+    <string name="distance_m">%sm</string>
+    <string name="threedays">3天以上</string>
+    <string name="day">天</string>
+    <string name="hour">小时</string>
+    <string name="min">分钟</string>
+    <string name="sec">秒</string>
+    <string name="all_route">全线路程%s米</string>
+    <string name="remaintime">剩余时间：%s</string>
+    <string name="location_fail">定位失败，商户距离可能不正确</string>
+    <!-- my coupon -->
+    <string name="unused">未使用</string>
+    <string name="used">已使用</string>
+    <string name="outoftime">已过期</string>
+    <string name="copyed">已复制</string>
+    <!-- merchant detail -->
+    <string name="scan">浏览%s次</string>
+    <string name="consumption">人均￥%s</string>
+    <string name="distance_km">%skm</string>
+    <string name="no_merchant">数据还没有加载完毕请耐心等待！</string>
+    <!-- order -->
+    <string name="phone_null">手机号不能为空</string>
+    <string name="phone_unable">手机号不合法</string>
+    <string name="order_info">购买成功后，服务券凭证将发送到:%s</string>
+    <string name="password">请输入支付密码</string>
+    <string name="select_payment">请选择支付方式</string>
+    <string name="yuan">%s元</string>
+    <!-- user center -->
+    <string name="user_info">个人资料</string>
+    <string name="myticketorder">我的服务券订单</string>
+    <string name="myticket">我的服务券</string>
+    <string name="mycoupon">我的优惠券</string>
+    <string name="mycollect">我的收藏</string>
+    <string name="all">全部订单</string>
+    <string name="unpay">待付款订单</string>
+    <string name="payed">已付款订单</string>
+    <!-- list -->
+    <string name="error_null">没有数据！ </string>
+    <string name="findpassword_check_ok">验证成功！即将跳转的密码修改界面</string>
+    <string name="update_password_ok">密码修改成功，请登陆！</string>
+    <string name="clean_all">点击清空所有</string>
+    <string name="no_more_data">亲,没有更多数据</string>
+    <string name="unbind">未绑定</string>
+    <!-- data -->
+    <string name="data_ticket_detail">{
+    \"ResponseStatus\": 0,
+    \"ResponseMsg\": null,
+    \"ResponseData\": {
+    \"ImageList\":\"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg,http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+    \"TicketPrice\":100.0,
+    \"TicketOriPrice\":120.0,
+    \"TicketLimit\":\"服务券限购信息\",
+    \"TicketTitle\":\"服务券标题\",
+    \"TicketDesc\":\"说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明说明\",
+    \"TicketBuyed\":123,
+    \"TicketRemain\":1234564,
+    \"TicketMerchant\":{
+    \"MerchantId\":1,
+    \"MerchantTele\":\"18221841106\",
+    \"MerchantName\":\"商户名字\",
+    \"MerchantAddress\":\"商户地址商户地址\",
+    \"MerchantDistance\":10.1km
+    },
+    \"TicketDetail\":\"凭波奇网团购券可享受一下内容：\n梳理毛发\n清理眼部\n清洗耳道\n拔耳毛\n修建腹地毛\",
+    \"TicketRemind\":\"有效期：2014.3.31至2014.9.30\n本券限10KG以内狗狗使用\n至少提前一天预约\n20KG以内狗狗需使用2张券\n7张券可享受洗澡+美容造型一次\n预约电话：13564443358\",
+    \"TicketShowUrl\":\"www.baidu.com\"
+    }}</string>
+    <string name="data">{
+    \"ResponseStatus\": 0,
+    \"ResponseMsg\": null,
+    \"ResponseData\": {
+        \"BannerList\": [
+            {
+                \"BannerType\": 1,
+                \"ImageUrl\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\"
+            },
+            {
+                \"BannerType\": 2,
+                \"ImageUrl\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\"
+            },
+            {
+                \"BannerType\": 3,
+                \"ImageUrl\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\"
+            },
+            {
+                \"BannerType\": 4,
+                \"ImageUrl\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\"
+            }
+        ],
+        \"HotList\": [
+            {
+                \"TicketImg\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+                \"TicketTitle\": \"宝贝狗\",
+                \"TicketPrice\": 100,
+                \"TicketOriPrice\": 210.2,
+                \"TicketId\": 1,
+                \"TicketBuyed\": 12
+            },
+            {
+                \"TicketImg\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+                \"TicketTitle\": \"title2\",
+                \"TicketPrice\": 101,
+                \"TicketId\": 2,
+                \"TicketOriPrice\": 2120.2,
+                \"TicketBuyed\": 122
+            },
+            {
+                \"TicketImg\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+                \"TicketTitle\": "title3",
+                \"TicketPrice\": 1200,
+                \"TicketId\": 3,
+                \"TicketOriPrice\": 2310.2,
+                \"TicketBuyed\": 142
+            }
+        ],
+        \"LowPriceList\": [
+            {
+                \"TicketImg\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+                \"TicketTitle\": \"title1\",
+                \"TicketPrice\": 100,
+                \"TicketId\": 4,
+                \"TicketOriPrice\": 210.2,
+                \"TicketBuyed\": 12
+            },
+            {
+                \"TicketImg\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+                \"TicketTitle\": \"title2\",
+                \"TicketPrice\": 101,
+                \"TicketOriPrice\": 2120.2,
+                \"TicketId\": 5,
+                \"TicketBuyed\": 122
+            },
+            {
+                \"TicketImg\": \"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+                \"TicketTitle\": \"title3\",
+                \"TicketPrice\": 1200,
+                \"TicketOriPrice\": 2310.2,
+                \"TicketId\": 6,
+                \"TicketBuyed\": 142
+            }
+        ]
+    }
+}</string>
+    <string name="near_date_merchant">{
+    \"ResponseStatus\": 0,
+    \"ResponseMsg\": null,
+    \"ResponseData\": {
+    \"SearchMerchantList\":[
+    		{
+    			\"MerchantId\":0,
+    			\"MerchantTitle\":\"小小星球宠屋\",
+    			\"AverageComsume\":23.00,
+    			\"MerchantImg\":\"http://img.noq.cc/customer/5089/b1f6/f568/4a11/f6-f568-4a11-b4f5-80378fcc2b41.jpg\",
+    			\"Distance\":622,
+    			\"BusinessArea\":浦东新区\",
+    			\"ScanNumbers\":100,
+    			\"Characteristic\":\"1,2\",
+    			\"MerchantTele\":\"12345678987\",
+    			\"MerchantLat\":31.238068,
+    			\"MerchantLng\":121.501654
+    		},
+    		{
+    			\"MerchantId\":1,
+    			\"MerchantTitle\":\"小小星球宠屋2\",
+    			\"AverageComsume\":23.00,
+    			\"MerchantImg\":\"http://img.noq.cc/customer/5089/b1f6/f568/4a11/f6-f568-4a11-b4f5-80378fcc2b41.jpg\",
+    			\"Distance\":522,
+    			\"BusinessArea\":\"浦东区\",
+    			\"ScanNumbers\":200,
+    			\"Characteristic\":\"1,2\",
+    			\"MerchantTele\":\"2345678987\",
+    			\"MerchantLat\":31.238168,
+    			\"MerchantLng\":121.51954
+    		}		
+    	]}}</string>
+    <string name="near_date_ticket">{
+    \"ResponseStatus\": 0,
+    \"ResponseMsg\": null,
+    \"ResponseData\": {
+    		\"SearchTicketList\":[
+    			{
+    			 \"TicketId\":1,
+    			 \"TicketTitle\":\"【七宝】宠缘宠物店 7KG以内狗狗洗澡套餐\",
+    			 \"TicketImg\":\"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+    			 \"TicketPrice\":23.00,
+    			 \"TicketOriPrice\":198.00,
+    			 \"Distance\":622,
+    			 \"BusinessArea\":\"徐汇区龙瑞路95号\"
+    			},
+    			{
+    			 \"TicketId\":1,
+    			 \"TicketTitle\":\"【七宝2】宠缘宠物店 8KG以内狗狗洗澡套餐\",
+    			 \"TicketImg\":\"http://p7.qhimg.com/dmt/234_175_/t012ae7f3d7feb4b036.jpg\",
+    			 \"TicketPrice\":28.00,
+    			 \"TicketOriPrice\":200.00,
+    			 \"Distance\":522,
+    			 \"BusinessArea\":\"徐汇区龙瑞路58号\"
+    			}
+    		]
+    	}
+    }</string>
+    <!-- alipay -->
+    <string name="sure">确定</string>
+    <string name="alipay_confirm_install_hint">"安装提示"</string>
+    <string name="alipay_tips">检测支付宝安全支付插件...</string>
+    <string name="alipay_confirm_install">"为保证您的交易安全，需要您安装支付宝安全支付服务，才能进行付款。\n\n点击确定，立即安装。"</string>
+    <string name="remote_call_failed">调用远程服务失败</string>
+    <string name="tips">提示</string>
+    <string name="alipay_remote_call_failed">调用支付宝服务失败！</string>
+    <string name="unionkey">F8B28875869127CDB26F2D20D64CC566C2418E9B833F7476C2543676E36009C8D658B662D2937F39DEBF884FD854545F650A44D300368265B41808DC12375E85E7597A47B24FEE928A187EE3440B87B8A829F3E65C0DC7980DC23C7DFC726C2F63FF63CDC3874CBA458E8E2C54E7F2F2AAFD847AD0C71EF7072DEF5A1D9113E3C065693E531B054151CE7B8F5BCE75ABFA7C8B7B6B0821072A9D6E1BDC7F5D369B46E9BD87F4FA76619BD5727CC34B3C</string>
+
+    <!-- mine -->
+    <string name="datum">个人资料</string>
+    <string name="service_ticket_order">服务券订单</string>
+    <string name="service_ticket">我的服务券</string>
+    <string name="coupon">我的优惠券</string>
+    <string name="collection">我的收藏</string>
+    <string name="all_order">全部订单(0)</string>
+    <string name="paying_order">等待付款订单(0)</string>
+    <string name="paid_order">已付款订单(0)</string>
+    <string name="loading_login">登录账号</string>
+    <string name="content_login">正在进行登录请稍后...</string>
+    <string name="no_more_order">暂时没有该类收藏</string>
+    <!-- map -->
+    <string name="map_pattern">地图模式-附近商户</string>
+    <string name="store_titel">商店名称</string>
+    <string name="store_content">商店信息内容</string>
+    <string name="call">拨打电话%1$s</string>
+    <string name="go_here">到这里</string>
+    <string name="store_details">店铺详情</string>
+    <string name="call_ok">拨打电话</string>
+    <string name="call_cancel">取消拨打</string>
+    <string name="bus_route">驾车</string>
+    <string name="walk_route">步行</string>
+    <string name="route_time">分钟</string>
+    <string name="route_Journey">公里</string>
+    <string name="search_nearby_merchant">搜索此处商户</string>
+    <string name="error_network">搜索失败,请检查网络连接！</string>
+    <string name="error_key">key验证无效！</string>
+    <string name="error_other">未知错误，请稍后重试!错误码为</string>
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+    <string name="list_pattern">列表模式</string>
+    <string name="no_location">请耐心等待！当前还未定位到您的坐标！</string>
+    <string name="no_route">没有路线</string>
+    <!-- near -->
+    <string name="near_ticket">附近的服务</string>
+    <string name="near_merchant">附近的的商户</string>
+    <string name="merchant_sort">排序</string>
+    <string name="merchant_type">类型</string>
+    <string name="ticket_nearest">离我最近</string>
+    <string name="ticket_type">所有类型</string>
+    <string name="m">米</string>
+    <string name="h">小时</string>
+    <string name="now_price">￥</string>
+    <string name="ori_Price">￥</string>
+    <string name="home_Price">￥%s</string>
+    <string name="near_sarch">对不起,我们当前仅支持10km范围内的商户搜索</string>
+    <!-- widgets -->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+    <!-- share -->
+    <string name="share_ticket">我正在使用波奇宠物手机客户端查看%s，超高性价比，买到就是赚到，推荐给我的小伙伴们</string>
+    <string name="share_merchat">我正在使用波奇宠物手机版查看品牌商户%s，优质服务，超低价位，推荐给我的小伙伴们</string>
+    <string name="share_all">我正在使用波奇宠物手机客户端，这里有正品特价高质服务，随时随地就能秒杀、抽奖，推荐你也试试</string>
+    <string name="share_weibo">分享到微博</string>
+    <string name="share_zhenxi">还能不能让宠物自由的玩耍？波奇App且用且珍惜</string>
+    <string name="check_error">验证失败!</string>
+    <string name="check_ok">验证第三方账号成功!</string>
+    <string name="have_user">用户信息已存在，正在跳转登录操作</string>
+    <string name="cancel_check"> 取消验证第三方账登陆</string>
+    <string name="share_error">分享失败!</string>
+    <string name="cancel_share">取消分享!</string>
+    <string name="share_suc">分享成功!</string>
+    <string name="shouquan_suc">授权成功!</string>
+     <string name="shouquan_cancel">取消授权!</string>
+     <string name="shouquan_error">授权失败!</string>
+	<string name="toast">您必须同意波奇网服务协议才能进行注册</string>
+	<string name="net_error">网络异常！</string>
+</resources>

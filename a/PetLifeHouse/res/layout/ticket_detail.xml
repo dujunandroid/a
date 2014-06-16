@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <CheckBox
+            android:id="@+id/collect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/bg_collect"
+            android:checked="false"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/collect"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_share" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.boqii.petlifehouse.widgets.CustomScrollView
+                android:id="@+id/main_page"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/layout_margin" >
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp" >
+
+                        <com.boqii.petlifehouse.widgets.AdGallery
+                            android:id="@+id/gallery"
+                            android:layout_width="fill_parent"
+                            android:layout_height="200dip"
+                            android:fadingEdge="none"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:soundEffectsEnabled="false"
+                            android:spacing="0dip" />
+
+                        <LinearLayout
+                            android:id="@+id/dot_images"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|center_horizontal"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dip" >
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/middle_ticket_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin" >
+
+                        <include
+                            android:id="@+id/ticket_info"
+                            layout="@layout/layout_ticket_status" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:background="@android:color/white"
+                        android:padding="@dimen/layout_padding" >
+
+                        <TextView
+                            android:id="@+id/title"
+                            style="@style/ticket_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="【黄兴公园】派多格宠物 5KG以内狗狗美容造型套餐" />
+
+                        <TextView
+                            android:id="@+id/desc"
+                            style="@style/user_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/title"
+                            android:layout_marginTop="5dp"
+                            android:maxLines="2"
+                            android:text="仅89元，价值120元的狗狗美容造型套餐仅89元价值120元的狗狗美容造型套餐仅89元价值120元的狗狗美容造型套餐仅89元价值120元的狗狗美容造型套餐" />
+
+                        <TextView
+                            android:id="@+id/buyed"
+                            style="@style/ticket_buyed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/desc"
+                            android:layout_marginTop="5dp"
+                            android:maxLines="2"
+                            android:text="30人已购" />
+
+                        <TextView
+                            android:id="@+id/time"
+                            style="@style/ticket_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/buyed"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@id/desc"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/ic_clock"
+                            android:drawablePadding="5dp"
+                            android:maxLines="2"
+                            android:text="剩余时间：1天12小时47分钟" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        android:background="@android:color/white" >
+
+                        <TextView
+                            android:id="@+id/merchant_able"
+                            style="@style/ticket_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/layout_padding"
+                            android:drawableLeft="@drawable/icon_merchant"
+                            android:drawablePadding="5dp"
+                            android:layout_marginTop="10dp"
+                            android:singleLine="true"
+                            android:text="适用商户"
+                            android:textColor="@color/text_gray" />
+
+                        <TextView
+                            android:id="@+id/line"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1px"
+                            android:layout_below="@id/merchant_able"
+                            android:layout_marginTop="15dp"
+                            android:background="#f0f0f0" />
+
+                        <RelativeLayout
+                            android:id="@+id/merchant_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/line"
+                            android:layout_marginTop="10dp"
+                            android:padding="@dimen/layout_padding" >
+
+                            <TextView
+                                android:id="@+id/merchant_name"
+                                style="@style/ticket_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="派多格宠物（包头南路店）" />
+
+                            <TextView
+                                android:id="@+id/merchant_address"
+                                style="@style/user_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/merchant_name"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:text="杨浦区包头南路640号（杨浦新苑对面）" />
+
+                            <TextView
+                                android:id="@+id/merchant_distance"
+                                style="@style/user_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/merchant_address"
+                                android:layout_marginTop="5dp"
+                                android:singleLine="true"
+                                android:text="10.1km" />
+
+                            <ImageView
+                                android:id="@+id/phone"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_phone" />
+
+                            <TextView
+                                android:layout_width="1px"
+                                android:layout_height="60dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@id/phone"
+                                android:background="@color/greyd1s" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <include
+                        android:id="@+id/detail"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        layout="@layout/layout_string_item" />
+
+                    <include
+                        android:id="@+id/remind"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        layout="@layout/layout_string_item" />
+
+                    <include
+                        android:id="@+id/show"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        layout="@layout/layout_short_item" />
+
+                    <include
+                        android:id="@+id/intro"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin"
+                        layout="@layout/layout_short_item" />
+                </LinearLayout>
+            </com.boqii.petlifehouse.widgets.CustomScrollView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/top_ticket_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                android:id="@+id/top_ticket_info"
+                layout="@layout/layout_ticket_status" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/top_ticket_info"
+                android:background="@color/greyd1s" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

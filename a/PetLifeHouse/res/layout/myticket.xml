@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/title_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的服务券" />
+    </RelativeLayout>
+
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/layout_padding"
+        android:paddingTop="@dimen/layout_padding"
+        android:background="#d1d1d1"
+        android:paddingRight="@dimen/layout_padding"
+        android:gravity="bottom"
+        >
+        <TextView 
+            android:id="@+id/unused"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="未使用"
+            android:gravity="center"
+            android:background="@drawable/bg_tab_able"
+            />
+        <TextView 
+            android:id="@+id/used"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="已使用"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:background="@drawable/bg_tab_able"
+            />
+        <TextView 
+            android:id="@+id/outoftime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="已过期"
+            android:gravity="center"
+            android:background="@drawable/bg_tab_able"
+            />
+    </LinearLayout>
+    
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+    
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_title" >
+
+            <RelativeLayout
+                android:id="@+id/login"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:tag="0"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/ticket_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_horizontal"
+                    android:text="点击登录"
+                    android:textColor="@color/text_gray"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_big_jiantou" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/logined"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:tag="0" >
+
+                <RelativeLayout
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" 
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/username"
+                        style="@style/ticket_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="dafda"
+                        android:textColor="@color/text_gray"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/username"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            style="@style/ticket_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="账户余额："
+                            android:textColor="@color/text_gray"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/account"
+                            style="@style/ticket_buyed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="￥1000" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_big_jiantou" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/top"
+                    android:background="#88ffffff" >
+
+                    <TextView
+                        android:id="@+id/all"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:tag="1"
+                        android:text="全部订单(100)"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#b3b3b3" />
+
+                    <TextView
+                        android:id="@+id/unpay"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:tag="2"
+                        android:text="待付款订单(100)"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#b3b3b3" />
+
+                    <TextView
+                        android:id="@+id/payed"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:tag="3"
+                        android:text="已付款订单(100)"
+                        android:textColor="@color/text_gray"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/user_info"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            layout="@layout/layout_short_item"
+            android:tag="4" />
+
+        <include
+            android:id="@+id/myticketorder"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1px"
+            layout="@layout/layout_short_item"
+            android:tag="5" />
+
+        <include
+            android:id="@+id/myticket"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1px"
+            layout="@layout/layout_short_item"
+            android:tag="6" />
+
+        <include
+            android:id="@+id/mycoupon"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1px"
+            layout="@layout/layout_short_item"
+            android:tag="7" />
+
+        <include
+            android:id="@+id/mycollect"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="1px"
+            layout="@layout/layout_short_item"
+            android:tag="8" />
+    </LinearLayout>
+
+</ScrollView>
